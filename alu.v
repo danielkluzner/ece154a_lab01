@@ -40,7 +40,7 @@ module alu(
 	default: tempy = 32'b0;
       endcase // case ({f})
       
-      if(y == 8'h0) assign temp0 = 1'b1;
+      if(y == 32'b0) assign temp0 = 1'b1;
       else assign temp0 = 1'b0;
       
    end
