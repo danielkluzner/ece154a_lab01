@@ -9,5 +9,4 @@ I corrected the output for the SLT entries to match what is described in the boo
 3) Figure out how to do #1 and test it in ModelSim
 4) Capture images of test waveforms
 5) Some other stuff is sure to come...
-
 6) Put errything into one PDF
