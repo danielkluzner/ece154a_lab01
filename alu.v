@@ -1,6 +1,6 @@
 // alu.v
 // ECE 154A, Fall 2019
-// Authors: Daniel Kluzner, Benji
+// Authors: Daniel Kluzner, Benji Liu
 
 // A 32-bit arithmetic logic unit (ALU)
 // as seen in 5.2.4 of "Harris & Harris"
