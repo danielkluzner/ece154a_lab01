@@ -1,6 +1,6 @@
 // testbench.v
 // ECE 154A, Fall 2019
-// Authors: Daniel Kluzner, Benji
+// Authors: Daniel Kluzner, Benji Liu
 
 // A testbench for the "alu" module
 
@@ -20,9 +20,9 @@ module alu_tb();
 	      .zero(sim_zero)
 	      ); 
 	
-   //make memory array large enough to hold all the values from the input file (16 values), 
-   // //with each location large enough to hold the largest value (8 bits)
-   reg [31:0] data [0:104];   //16 memory words (lines), 8 bits wide
+	//make memory array large enough to hold all the values from the input file (105 values), 
+	//with each location large enough to hold the largest value (32 bits)
+   reg [31:0] data [0:104];
    reg [2:0]  f_temp;
    reg [31:0] a_temp, b_temp;
    reg [31:0] y_temp;
@@ -43,16 +43,13 @@ module alu_tb();
 	 sim_f = f_temp;
 
 	 #5;
+	      
 	 if(y_temp == sim_y && zero_temp == sim_zero) begin
-	    //$display("sim_y: %h, sim_z: %d", sim_y, sim_zero);
-	    //$display("y_temp: %h, z_temp: %d", y_temp, zero_temp);
-	    $display("Test %d passed", i/5);
-
+		 $display("Test %d passed", i/5 + 1);
 	 end
-	 #5;
       end
-
+	   
       $stop;
+	   
    end     
-
 endmodule
